@@ -1,4 +1,4 @@
-# Cordova GoogleMaps plugin for Android, iOS and Browser v2.7.1
+# Cordova GoogleMaps plugin for Android, iOS and Browser v2.8.0
 
 | Download | Build test (multiple_maps branch)|
 |----------|---------------------------|
@@ -85,7 +85,7 @@ For browser platform,
 
 ## Install optional variables (config.xml)
 
-  - ![](https://raw.githubusercontent.com/mapsplugin/cordova-plugin-googlemaps/master/images/icon-android.png) **GOOGLE_MAPS_PLAY_SERVICES_VERSION = (16.0.1)**<br>
+  - ![](https://raw.githubusercontent.com/mapsplugin/cordova-plugin-googlemaps/master/images/icon-android.png) **PLAY_SERVICES_VERSION = (15.0.1)**<br>
     The Google Play Services SDK version.
     _You need to specify the same version number with all other plugins._
     Check out the latest version [here](https://developers.google.com/android/guides/releases).
@@ -94,6 +94,10 @@ For browser platform,
     This plugin requires the Android support library v4.
     _The minimum version is 24.1.0._
     Check out the latest version [here](https://developer.android.com/topic/libraries/support-library/revisions.html).
+
+  - ![](https://raw.githubusercontent.com/mapsplugin/cordova-plugin-googlemaps/master/images/icon-android.png) **GOOGLE_MAPS_ANDROID_SDK = ()**<br>
+    The Google Maps SDK for Android version.
+    `i.e. GOOGLE_MAPS_ANDROID_SDK=maps-sdk-3.0.0-beta`.
 
   - ![](https://raw.githubusercontent.com/mapsplugin/cordova-plugin-googlemaps/master/images/icon-ios.png) **LOCATION_WHEN_IN_USE_DESCRIPTION**<br>
     This message is displayed when your application requests **LOCATION PERMISSION for only necessary times**.
@@ -112,13 +116,8 @@ For browser platform,
 ---------------------------------------------------------------------------------------------------------
 
 ## Release Notes
-
-  - **v2.7.1**
-    - Fix: (iOS) UiWebView references present in v2.7.0
-
   - **v2.7.0**
     - Re-adoption: <a href="https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk" target="_blank">cordova-plugin-googlemaps-sdk dependency</a>
-    - Important update: No longer support `UIWebView` on iOS. `WKWebView` only.
     - Fix: (iOS) Can't load image files from local host on ionic 4 / 5
     - Update: (Android) prevent null pointer error in AsyncLoadImage.java
     - Fix: Css animation interference when call setDiv and there is a push/pop page
@@ -138,8 +137,14 @@ For browser platform,
     - Remove promise-7.0.4-min.js.map
     - Fix: (iOS) bug fix: App crashes if "bearing" property is "<null>"
     - Fix: HTMLColor2RGBA() converts to incorrect value
-    - Fix: (Android) Can't load marker image from the Internet
-    - many bug fixes...
+    - Fix: (Android) Can't load marker image from the Ineternet
+
+  - **v2.6.2**
+    - Fix: (Android) build error
+
+  - **v2.6.1**
+    - Fix: (Android) Conflicting with `OneSignal-Cordova-SDK`
+    - Fix: (iOS) App crashes when marker url isn't valid.
 
 
 ---------------------------------------------------------------------------------------------------------
