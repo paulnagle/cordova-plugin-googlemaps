@@ -1275,7 +1275,7 @@ public class PluginMap extends MyPlugin implements OnMarkerClickListener,
                 e.printStackTrace();
               }
               if (results.cameraBounds != null) {
-                fitBounds(results.cameraBounds, (int)(results.cameraPadding / density));
+                fitBounds(results.cameraBounds, (int)(results.cameraPadding * density));
               }
             }
 
