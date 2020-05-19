@@ -137,9 +137,9 @@ For browser platform,
   - **v2.6.2**
     - Fix: (Android) build error
 
-  - **v2.6.1**
-    - Fix: (Android) Conflicting with `OneSignal-Cordova-SDK`
-    - Fix: (iOS) App crashes when marker url isn't valid.
+  - **v2.8.0**
+    - Add: (Android/iOS/Browser) `mapOptions.preferences.restriction`
+    - Add: (Android/iOS/Browser) ElevationService
 
 
 ---------------------------------------------------------------------------------------------------------
