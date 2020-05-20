@@ -1335,12 +1335,17 @@ public class PluginMap extends MyPlugin implements OnMarkerClickListener,
               }
 
               if (preferences.has("zoom")) {
-                JSONObject zoom = preferences.getJSONObject("zoom");
-                if (zoom.has("minZoom")) {
-                  map.setMinZoomPreference((float)zoom.getDouble("minZoom"));
-                }
-                if (zoom.has("maxZoom")) {
-                  map.setMaxZoomPreference((float)zoom.getDouble("maxZoom"));
+                if (!"null".equals(preferences.getString("zoom"))) {
+                  JSONObject zoom = preferences.getJSONObject("zoom");
+                  if (zoom.has("minZoom")) {
+                    map.setMinZoomPreference((float) zoom.getDouble("minZoom"));
+                  }
+                  if (zoom.has("maxZoom")) {
+                    map.setMaxZoomPreference((float) zoom.getDouble("maxZoom"));
+                  }
+                } else {
+                  map.setMinZoomPreference(2);
+                  map.setMaxZoomPreference(23);
                 }
               }
 
@@ -1353,10 +1358,8 @@ public class PluginMap extends MyPlugin implements OnMarkerClickListener,
               }
 
               if (preferences.has("restriction")) {
-                Object target = preferences.get("restriction");
-                @SuppressWarnings("rawtypes")
-                Class targetClass = target.getClass();
-                if ("org.json.JSONObject".equals(targetClass.getName()) && target != null) {
+                if (!"null".equals(preferences.getString("restriction"))) {
+
                   JSONObject restriction = preferences.getJSONObject("restriction");
                   LatLngBounds.Builder builder = new LatLngBounds.Builder();
                   builder.include(new LatLng(restriction.getDouble("south"), restriction.getDouble("west")));
@@ -1367,10 +1370,10 @@ public class PluginMap extends MyPlugin implements OnMarkerClickListener,
                   map.setMinZoomPreference((float)restriction.getDouble("minZoom"));
                 } else {
 
-                  if (preferences.has("zoom")) {
+                  if (preferences.has("zoom") && !"null".equals(preferences.getString("zoom"))) {
                     JSONObject zoom = preferences.getJSONObject("zoom");
                     if (zoom.has("minZoom")) {
-                      map.setMinZoomPreference((float)zoom.getDouble("minZoom"));
+                      map.setMinZoomPreference((float) zoom.getDouble("minZoom"));
                     } else {
                       map.setMinZoomPreference(2);
                     }
