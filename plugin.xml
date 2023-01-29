@@ -320,7 +320,7 @@
     </js-module>
 
     <info>
-      Official document https://github.com/mapsplugin/cordova-plugin-googlemaps-doc/blob/master/v2.6.0/README.md Please consider to buy a beer for us 🍺 https://github.com/mapsplugin/cordova-plugin-googlemaps#buy-us-a-beer
+      Official document https://github.com/mapsplugin/cordova-plugin-googlemaps-doc/blob/master/v2.6.0/README.md 
     </info>
 
     <config-file target="config.xml" parent="/*">
@@ -503,7 +503,7 @@
   <!-- browser -->
   <platform name="browser">
     <info>
-      Official document https://github.com/mapsplugin/cordova-plugin-googlemaps-doc/blob/master/v2.6.0/README.md Please consider to buy a beer for us 🍺 https://github.com/mapsplugin/cordova-plugin-googlemaps#buy-us-a-beer
+      Official document https://github.com/mapsplugin/cordova-plugin-googlemaps-doc/blob/master/v2.6.0/README.md 
     </info>
 
     <js-module name="googlemaps-cdv-plugin" src="www/plugin-loader-for-browser.js">
