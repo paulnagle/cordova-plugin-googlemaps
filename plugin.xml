@@ -152,7 +152,7 @@
       <preference name="BackgroundColor" value="0"/>
 
       <!-- for this plugin -->
-      <preference name="android-minSdkVersion" value="20"/>
+      <preference name="android-minSdkVersion" value="21"/>
     </config-file>
 
     <config-file target="res/xml/config.xml" parent="/*">
